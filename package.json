@@ -1,38 +1,49 @@
 {
   "name": "advanced-react",
   "version": "1.0.0",
-  "description": "Advanced React Tutorial",
-  "main": "index.js",
+  "description": "Advanced React",
+  "main": "lib/server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "build": "babel lib -d src",
-    "dev": "npm run build && nodemon src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack -wd",
+    "dev": "nodemon --exec babel-node lib/server.js",
+    "test": "jest --watch"
   },
   "author": "Pavlo LIAHUSHYN",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "react",
-      "env",
-      "stage-2"
-    ]
-  },
   "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "webpack-cli": "^3.1.2",
+    "ws": "3.3.2"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "nodemon": "^1.18.8"
+    "nodemon": "^1.18.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "webpack": "^4.27.1"
   }
 }
