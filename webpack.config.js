@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/jsx-quotes
 const path = require('path');
 
 module.exports = {

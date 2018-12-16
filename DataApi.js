@@ -1,4 +1,4 @@
-class DataApi {
+export default class DataApi {
     constructor(rawData) {
         this.rawData = rawData;
     }
@@ -17,6 +17,4 @@ class DataApi {
     getAuthors() {
         return this.mapIntoObject(this.rawData.authors);
     }
-}
-
-export default DataApi;
+};
