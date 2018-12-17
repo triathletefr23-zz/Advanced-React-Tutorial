@@ -7,8 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "webpack": "webpack -wd",
-    "dev": "nodemon --exec babel-node lib/server.js",
+    "webpack": "webpack -wd --hot",
+    "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
     "test": "jest --watch"
   },
   "author": "Pavlo LIAHUSHYN",
