@@ -5,7 +5,8 @@ module.exports = {
         resolve: {
             modules: [
                 path.resolve('./lib'),
-                path.resolve('./node_modules')
+                path.resolve('./node_modules'),
+                path.resolve('./lib/state-api/')
             ]
         },
         entry: ['@babel/polyfill', './lib/renderers/dom.js'],

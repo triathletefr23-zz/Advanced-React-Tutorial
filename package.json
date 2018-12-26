@@ -7,9 +7,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "webpack": "webpack -wd --hot",
+    "webpack": "webpack -wd",
     "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "author": "Pavlo LIAHUSHYN",
   "license": "ISC",
@@ -17,6 +18,9 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.1",
@@ -24,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "prop-types": "^15.6.2",
     "react-test-renderer": "^16.6.3",
     "webpack-cli": "^3.1.2",
     "ws": "3.3.2"
@@ -35,6 +40,7 @@
     "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
@@ -43,9 +49,21 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jshint": "^2.9.7",
+    "lint-staged": "^8.1.0",
     "nodemon": "^1.18.8",
+    "prettier": "^1.15.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "webpack": "^4.27.1"
+  },
+  "lint-staged": {
+    "gitDir": "../",
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "prettier",
+        "git add"
+      ]
+    }
   }
 }

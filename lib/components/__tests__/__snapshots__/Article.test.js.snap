@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article renders correctly to snapshot 1`] = `
+<Article
+  article={
+    Object {
+      "authorId": 123,
+      "body": "testtesttesttesttesttesttesttest",
+      "date": "Mon Jul 11 2016 00:00:00 GMT+0000 (UTC)",
+      "title": "testArticle",
+    }
+  }
+  author={
+    Object {
+      "firstName": "fn",
+      "id": 123,
+      "lastName": "ln",
+      "website": "site.com",
+    }
+  }
+  store={
+    Object {
+      "lookupAuthor": [MockFunction] {
+        "calls": Array [
+          Array [
+            123,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Object {
+              "firstName": "fn",
+              "id": 123,
+              "lastName": "ln",
+              "website": "site.com",
+            },
+          },
+        ],
+      },
+    }
+  }
+/>
+`;
